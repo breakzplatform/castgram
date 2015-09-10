@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>InstaCHUN</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="30">
+    <script type="text/javascript" src="instafeed.min.js"></script>
+    <script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        sortby: 'most-recent',
+        tagName: 'nofilter',
+        resolution: 'standard_resolution',
+        limit: '17',
+        clientId: 'ed5a4b822d0847dfaa3cfd473e87a3f9',
+        template: '<img src="{{image}}" />'
+    });
+    feed.run();
+    </script>
+
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+
+    #instafeed img {
+      padding: 0;
+      margin: 0;
+      width: 25%;
+    }
+    </style>
+  </head>
+
+  <body>
+    <div id="instafeed"></div>
+  </body>
+
+</html>
