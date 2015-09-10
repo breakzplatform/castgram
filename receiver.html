@@ -12,10 +12,10 @@
     <script type="text/javascript">
     var feed = new Instafeed({
         get: 'tagged',
-        sortby: 'most-recent',
+        sortby: 'random',
         tagName: 'nofilter',
         resolution: 'standard_resolution',
-        limit: '17',
+        limit: '21',
         clientId: 'ed5a4b822d0847dfaa3cfd473e87a3f9',
         template: '<img src="{{image}}" />'
     });
@@ -23,16 +23,28 @@
     </script>
 
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      background: #000;
+    #instafeed {
+      position: relative;
+      margin-top: -5vh;
+        padding: 0;
+        margin: 0;
     }
 
     #instafeed img {
       padding: 0;
       margin: 0;
-      width: 25%;
+      width: 20%;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    #instafeed img:nth-child(1){
+      position: absolute;
+      top: 15vh;
+      left: calc(50% - 40vh);
+      width: auto;
+      height: 80vh;
+      margin: 0 auto;
     }
     </style>
   </head>
