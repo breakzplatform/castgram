@@ -1,56 +1,93 @@
-
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>InstaCHUN</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="30">
-    <script type="text/javascript" src="node_modules/instafeed.js/instafeed.min.js"></script>
-    <script type="text/javascript">
+<head>
+  <title>InstaCHUN</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="30">
+  <script type="text/javascript" src="node_modules/instafeed.js/instafeed.min.js"></script>
+
+  <link href="node_modules/normalize.css/nomalize.css">
+
+  <script type="text/javascript">
     var feed = new Instafeed({
-        get: 'tagged',
-        sortby: 'random',
-        tagName: 'nofilter',
-        resolution: 'standard_resolution',
-        limit: '21',
-        clientId: 'ed5a4b822d0847dfaa3cfd473e87a3f9',
-        template: '<img src="{{image}}" />'
+      get: 'tagged',
+      sortby: 'random',
+      tagName: 'nofilter',
+      resolution: 'standard_resolution',
+      limit: '21',
+      clientId: 'ed5a4b822d0847dfaa3cfd473e87a3f9',
+      template: '<div class="img-insta"><img src="{{image}}" /><p>{{caption}}</p></div>'
     });
     feed.run();
-    </script>
+  </script>
 
-    <style>
-    #instafeed {
-      position: relative;
-      margin-top: -5vh;
-        padding: 0;
-        margin: 0;
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
     }
 
-    #instafeed img {
+    #instafeed {
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+
+    .img-insta p {
+      display: none;
+    }
+
+    .img-insta img {
       padding: 0;
       margin: 0;
       width: 20%;
       border: 0;
+      float: left;
       box-sizing: border-box;
     }
 
-    #instafeed img:nth-child(1){
+    .img-insta:nth-child(1) {
       position: absolute;
-      top: 15vh;
+      top: 10vh;
       left: calc(50% - 40vh);
       width: auto;
       height: 80vh;
-      margin: 0 auto;
+      box-shadow: 0 0 15px #000;
     }
-    </style>
-  </head>
 
-  <body>
-    <div id="instafeed"></div>
-  </body>
+    .img-insta:nth-child(1) img {
+      background: #fff;
+      width: 80vh;
+      height: 80vh;
+    }
+
+    .img-insta:nth-child(1) p {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: left;
+      margin: 0;
+      padding: 10px;
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      font-size: 2em;
+      max-width: 80vh;
+      overflow: hidden;
+    }
+
+    .img-insta img:nth-child(5n+1) {
+      clear: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="instafeed"></div>
+</body>
 
 </html>
