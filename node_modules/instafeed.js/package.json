@@ -1,0 +1,50 @@
+{
+  "name": "instafeed.js",
+  "description": "A simple Instagram javascript plugin for your website.",
+  "version": "1.3.2",
+  "author": {
+    "name": "Steven Schobert",
+    "email": "spschobert@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenschobert/instafeed.js.git"
+  },
+  "devDependencies": {
+    "coffee-script": "1.3.x",
+    "coffeelint": "0.5.x",
+    "mocha": "1.6.x",
+    "chai": "1.3.x",
+    "uglify-js": "1.3.x"
+  },
+  "main": "./instafeed.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "gitHead": "1c50b9adf64744f0052b9f2fc8814f7505266d27",
+  "bugs": {
+    "url": "https://github.com/stevenschobert/instafeed.js/issues"
+  },
+  "homepage": "https://github.com/stevenschobert/instafeed.js",
+  "_id": "instafeed.js@1.3.2",
+  "_shasum": "8d3b6e52a39c419de60cdf9e471b36b6841ea780",
+  "_from": "instafeed.js@*",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "stevenschobert",
+    "email": "spschobert@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "stevenschobert",
+      "email": "spschobert@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "8d3b6e52a39c419de60cdf9e471b36b6841ea780",
+    "tarball": "http://registry.npmjs.org/instafeed.js/-/instafeed.js-1.3.2.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/instafeed.js/-/instafeed.js-1.3.2.tgz",
+  "readme": "ERROR: No README data found!"
+}
